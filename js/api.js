@@ -22,3 +22,12 @@ const loadComment = async() => {
 }
 
 // fetch and try catch 
+const loadPhotos = async()=>{
+    try{
+        const photos = await fetch('https://jsonplaceholder.typicode.com/todos');
+        const data = await photos.json();
+        console.log(data)
+    }catch(error){
+        console.error("error inside try catch and error is " , error);
+    }
+}
