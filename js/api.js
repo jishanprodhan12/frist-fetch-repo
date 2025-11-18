@@ -18,7 +18,7 @@ const loadPost = () => {
 const loadComment = async () => {
     const comments = await fetch('https://jsonplaceholder.typicode.com/comments');
     const data = await comments.json();
-    console.log(data);
+    handleComment(data);
 }
 
 // fetch and try catch 
@@ -56,5 +56,18 @@ function handlePhotos(datas) {
     `
         container.appendChild(div);
    
+    }
+}
+function handleComment(data){
+    const container = document.getElementById('all-container');
+    for(const d of data){
+        const p = document.createElement('p');
+        const comment = document.createElement('p');
+        const {postId , body }=   d ;
+        p.innerText = `post id : ${postId}`
+        comment.innerText = `comment : ${body}`
+        container.appendChild(p);
+        container.appendChild(comment);
+        console.log(d)
     }
 }
