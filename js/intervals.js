@@ -8,11 +8,16 @@
 // console.log(8);
 
 // objective 
-// 1. make a clock and counter 
+// 1. print all numbers using setInterval()
 let num = 0 ;
 console.log(num);
 const clockId = setInterval(()=>{
-    num ++ ; 
+    ++num ; 
+    if(num < 10){
     console.log(num);
+    }else{
+        clearInterval(clockId);
+    }
 },1000);
+
 
