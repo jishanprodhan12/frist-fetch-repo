@@ -10,9 +10,9 @@ const sum = scores.reduce((accumulator, current) => accumulator + current, 0);
 console.log(`sum using reduce function : ${sum}`);
 
 // way 2 
-const rum3 = scores.reduce((accumulator, current) => {
+const sum2 = scores.reduce((accumulator, current) => {
     accumulator + current;
     console.log(accumulator , current);
     return accumulator + current ;
 }, 0);
-console.log(`rum using reduce function : ${rum3}`);
+console.log(`rum using reduce function : ${sum2}`);
