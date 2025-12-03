@@ -1,10 +1,5 @@
-// utils.js
-
-function getVideoId(url) {
-    // এখানে ভিডিও ID বের করার লজিক থাকবে...
-    console.log("Extracting ID from:", url);
-    return 'video_id_123'; 
+export default function getVideoId(id){
+    console.log(`inside Utils.js file  `);
+    console.log(`inside getVideoId function and id is ${id}`);
 }
-
-// ডিফল্ট এক্সপোর্ট সিনট্যাক্স
-export default getVideoId;
+// export default getVideoId();
